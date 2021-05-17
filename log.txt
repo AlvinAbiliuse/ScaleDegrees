@@ -1,0 +1,15 @@
+Logging date:17-May-2021 12:36
+
+<class 'KeyboardInterrupt'>
+
+
+Logging date:17-May-2021 12:36
+
+
+
+
+Logging date:17-May-2021 12:37
+
+<class 'KeyboardInterrupt'>
+
+
