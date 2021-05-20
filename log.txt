@@ -48,3 +48,4 @@ Logging date:20-May-2021 07:28
 <class 'TypeError'>
 
 
+2021-05-20 07:46:30,756 - ERROR - Error Messages have been logged!

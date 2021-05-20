@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 
 
-import random
+from random import shuffle
 from time import sleep
-from sys import exc_info
+from sys import exc_info, stdout
 from datetime import datetime
 
 def quiz(key, degrees):
 	while True:
-		random.shuffle(keys)
+		shuffle(keys)
 		print(f'Key is {keys[0]}')
 		for i in range(25):
-			print(f'Play {random.shuffle(degrees)[0]}')
+			shuffle(degrees)
+			print(f'Play {degrees[0]}')
 			sleep(2)
 		print('Key Change!')
 
@@ -23,7 +24,6 @@ minorScaleDegrees = list()
 
 
 if __name__ == "__main__":
-#	try:
 	input1 = input('Major or Minor!:   ').lower()
 	input2 = input('Thirds or all!:   ').lower()
 	print(input1 + '  ' + input2)
@@ -35,6 +35,3 @@ if __name__ == "__main__":
 	elif input1 == "minor":
 		print('', end='')
 		
-#	except:
-#		with open('log.txt', 'a+') as log:
-#			log.write('Logging date:' + str(datetime.now().strftime("%d-%b-%Y %H:%M")) + '\n\n' + str(exc_info()[0]) + '\n\n\n')
