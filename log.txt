@@ -13,3 +13,38 @@ Logging date:17-May-2021 12:37
 <class 'KeyboardInterrupt'>
 
 
+Logging date:20-May-2021 07:11
+
+<class 'KeyboardInterrupt'>
+
+
+Logging date:20-May-2021 07:23
+
+<class 'TypeError'>
+
+
+Logging date:20-May-2021 07:23
+
+<class 'TypeError'>
+
+
+Logging date:20-May-2021 07:25
+
+<class 'TypeError'>
+
+
+Logging date:20-May-2021 07:26
+
+<class 'TypeError'>
+
+
+Logging date:20-May-2021 07:27
+
+<class 'TypeError'>
+
+
+Logging date:20-May-2021 07:28
+
+<class 'TypeError'>
+
+
