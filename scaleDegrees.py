@@ -6,6 +6,7 @@ from time import sleep
 from sys import exc_info, stdout
 from datetime import datetime
 
+
 def quiz(key, degrees):
 	while True:
 		shuffle(keys)
@@ -22,8 +23,12 @@ majorScaleDegrees = [1, 2, 3, 4, 5, 6, 7]
 majorScaleThirds = [1, 3, 5, 7]
 minorScaleDegrees = list()
 
+# TODO: add minor scale degrees and minor scale thirds
+# TODO: add minor and major pentatonic scales
+
 
 if __name__ == "__main__":
+# TODO: ask again if input is neither of the options listed
 	input1 = input('Major or Minor!:   ').lower()
 	input2 = input('Thirds or all!:   ').lower()
 	print(input1 + '  ' + input2)
