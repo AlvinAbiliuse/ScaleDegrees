@@ -17,26 +17,36 @@ def quiz(key, degrees):
 			sleep(2)
 		print('Key Change!')
 
-keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Gb', 'Db', 'C#', 'Ab', 'Eb', 'Bb', 'F']
+keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Gb', 'Db', 'C#', 'Ab',
+		 'Eb', 'Bb', 'F']
 
 majorScaleDegrees = [1, 2, 3, 4, 5, 6, 7]
 majorScaleThirds = [1, 3, 5, 7]
 
 
-''' 
-for future
 
-majorPentatonic = list()
-minorScaleDegrees = list()
-minorScaleThirds = list()
-minorPentatonic = list()
-
-'''
+# TODO: majorPentatonic = list()
+# TODO: minorScaleDegrees = list()
+# TODO: minorScaleThirds = list()
+# TODO: minorPentatonic = list()
+# TODO: ability to choose bpm
 
 if __name__ == "__main__":
-# TODO: ask again if input is neither of the options listed
-	input1 = input('Major or Minor!:   ').lower()
-	input2 = input('Thirds or all!:   ').lower()
+	while True:
+		input1 = input('Major or Minor!:   ').lower()
+		if input1 in ['major', 'minor']:
+			break
+		else:
+			print('Try Again!')
+			continue
+	while True:
+		input2 = input('Thirds or all!:   ').lower()
+		if input2 in ['thirds', 'all']:
+			break
+		else:
+			print('Try Again!')
+			continue
+
 	print(input1 + '  ' + input2)
 	if input1 == "major":
 		if input2 == "thirds":
