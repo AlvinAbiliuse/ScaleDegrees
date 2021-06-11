@@ -3,8 +3,12 @@
 
 from random import shuffle
 from time import sleep
-from datetime import datetime
-
+'''
+	from datetime import datetime
+	possibly use the datetime module to come up with a clever way to 
+	make notes appear at chosen bpm's.
+	or use some other method 
+'''
 
 def quiz(key, degrees):
 	while True:
