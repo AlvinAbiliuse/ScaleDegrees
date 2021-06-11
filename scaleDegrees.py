@@ -3,7 +3,6 @@
 
 from random import shuffle
 from time import sleep
-from sys import exc_info, stdout
 from datetime import datetime
 
 
