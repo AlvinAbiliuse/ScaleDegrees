@@ -30,10 +30,10 @@ majorScaleThirds = [1, 3, 5, 7]
 
 def randomNotes():
 	while True:
-		random.shuffle(keys)
+		shuffle(keys)
 		for i in keys:
 			print(i)
-			time.sleep(10)
+			sleep(10)
 
 # TODO: majorPentatonic = list()
 # TODO: minorScaleDegrees = list()
