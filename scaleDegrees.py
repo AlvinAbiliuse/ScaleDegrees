@@ -21,11 +21,17 @@ keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Gb', 'Db', 'C#', 'Ab', 'Eb', 'Bb', 
 
 majorScaleDegrees = [1, 2, 3, 4, 5, 6, 7]
 majorScaleThirds = [1, 3, 5, 7]
+
+
+''' 
+for future
+
+majorPentatonic = list()
 minorScaleDegrees = list()
+minorScaleThirds = list()
+minorPentatonic = list()
 
-# TODO: add minor scale degrees and minor scale thirds
-# TODO: add minor and major pentatonic scales
-
+'''
 
 if __name__ == "__main__":
 # TODO: ask again if input is neither of the options listed
