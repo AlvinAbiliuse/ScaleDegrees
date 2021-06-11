@@ -3,6 +3,8 @@
 
 from random import shuffle
 from time import sleep
+from sys import exit
+
 '''
 	from datetime import datetime
 	possibly use the datetime module to come up with a clever way to 
@@ -35,6 +37,18 @@ majorScaleThirds = [1, 3, 5, 7]
 # TODO: ability to choose bpm
 
 if __name__ == "__main__":
+	while True:
+		input0 = input('Notes (y/n)').lower()
+		if input0 == 'y':
+			# TODO:
+		elif input0 == 'n':
+			break
+		else:
+			print('Try Again!')
+			continue
+		exit()
+
+		
 	while True:
 		input1 = input('Major or Minor!:   ').lower()
 		if input1 in ['major', 'minor']:
