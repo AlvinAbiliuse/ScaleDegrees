@@ -28,7 +28,12 @@ keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Gb', 'Db', 'C#', 'Ab',
 majorScaleDegrees = [1, 2, 3, 4, 5, 6, 7]
 majorScaleThirds = [1, 3, 5, 7]
 
-
+def randomNotes():
+	while True:
+		random.shuffle(keys)
+		for i in keys:
+			print(i)
+			time.sleep(10)
 
 # TODO: majorPentatonic = list()
 # TODO: minorScaleDegrees = list()
@@ -40,7 +45,7 @@ if __name__ == "__main__":
 	while True:
 		input0 = input('Notes (y/n)').lower()
 		if input0 == 'y':
-			# TODO:
+			randomNotes()
 		elif input0 == 'n':
 			break
 		else:
@@ -48,7 +53,6 @@ if __name__ == "__main__":
 			continue
 		exit()
 
-		
 	while True:
 		input1 = input('Major or Minor!:   ').lower()
 		if input1 in ['major', 'minor']:
