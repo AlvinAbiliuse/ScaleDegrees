@@ -25,9 +25,17 @@ def quiz(key, degrees):
 keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Gb', 'Db', 'C#', 'Ab',
 		 'Eb', 'Bb', 'F']
 
-majorScaleDegrees = [1, 2, 3, 4, 5, 6, 7]
-majorScaleThirds = [1, 3, 5, 7]
+majorScaleDegrees = ['1', '2', '3', '4', '5', '6', '7']
+majorScaleThirds = ['1', '3', '5', '7']
 
+'''
+for later
+majorPentatonic = ['1', '2', '3', '5', '6']
+minorScaleDegrees = ['1', '2', 'b3', '4', '5', 'b6', 'b7']
+minorScaleThirds = ['1', 'b3', '5', 'b7']
+minorPentatonic = ['1', 'b3', '4', '5', 'b7']
+
+'''
 def randomNotes():
 	while True:
 		shuffle(keys)
@@ -35,11 +43,8 @@ def randomNotes():
 			print(i)
 			sleep(10)
 
-# TODO: majorPentatonic = list()
-# TODO: minorScaleDegrees = list()
-# TODO: minorScaleThirds = list()
-# TODO: minorPentatonic = list()
-# TODO: ability to choose bpm
+# TODO: ability to choose bpm	
+# TODO: GUI Interface
 
 if __name__ == "__main__":
 	while True:
