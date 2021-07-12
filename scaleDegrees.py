@@ -10,8 +10,29 @@ from sys import exit
 	possibly use the datetime module to come up with a clever way to 
 	make notes appear at chosen bpm's.
 	or use some other method 
+
+for later
+majorPentatonic = ['1', '2', '3', '5', '6']
+minorScaleDegrees = ['1', '2', 'b3', '4', '5', 'b6', 'b7']
+minorScaleThirds = ['1', 'b3', '5', 'b7']
+minorPentatonic = ['1', 'b3', '4', '5', 'b7']
 '''
 
+#TODO: ability to choose bpm   
+#TODO: GUI Interface
+#TODO: reveal notes in scale after sleep period in randomNotes()
+
+
+
+keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Gb', 'Db', 'C#', 'Ab',
+         'Eb', 'Bb', 'F']
+
+majorScaleDegrees = ['1', '2', '3', '4', '5', '6', '7']
+majorScaleThirds = ['1', '3', '5', '7']
+
+
+# Chooses a random key and displays scale degrees randomly after a
+# sleep period for 25 turns and then switches keys. loops until ctrl+c
 def quiz(key, degrees):
 	while True:
 		shuffle(keys)
@@ -22,20 +43,9 @@ def quiz(key, degrees):
 			sleep(2)
 		print('Key Change!')
 
-keys = ['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Gb', 'Db', 'C#', 'Ab',
-		 'Eb', 'Bb', 'F']
 
-majorScaleDegrees = ['1', '2', '3', '4', '5', '6', '7']
-majorScaleThirds = ['1', '3', '5', '7']
-
-'''
-for later
-majorPentatonic = ['1', '2', '3', '5', '6']
-minorScaleDegrees = ['1', '2', 'b3', '4', '5', 'b6', 'b7']
-minorScaleThirds = ['1', 'b3', '5', 'b7']
-minorPentatonic = ['1', 'b3', '4', '5', 'b7']
-
-'''
+# Displays random key every 10 seconds. to be used as a tool to memorize
+# all the notes in the key.
 def randomNotes():
 	while True:
 		shuffle(keys)
@@ -43,42 +53,26 @@ def randomNotes():
 			print(i)
 			sleep(10)
 
-# TODO: ability to choose bpm	
-# TODO: GUI Interface
 
 if __name__ == "__main__":
+	# loops until the input made is a number.
 	while True:
-		input0 = input('Notes (y/n)').lower()
-		if input0 == 'y':
-			randomNotes()
-		elif input0 == 'n':
+		try:
+			choice = int(input('Enter the Number of your choice: \n\
+    1. Major Triads\n    2. All Major Notes\n    3. Minor Triads\n\
+    4. All Minor Notes\n    5. Root Notes Only'))
 			break
-		else:
-			print('Try Again!')
-			continue
-		exit()
+		except ValueError:
+			print('You need to input a number')
+	# if elif statements to call the correct  function with the correct
+	# parameters
+	if choice == 1:
+		quiz(keys, majorScaleThirds)
+	elif choice == 2:
+		quiz(keys, majorScaleDegrees)
+	elif choice == 5:
+		randomNotes()
+	# minor scale thirds to be added
+	# minor scale degrees to be added
 
-	while True:
-		input1 = input('Major or Minor!:   ').lower()
-		if input1 in ['major', 'minor']:
-			break
-		else:
-			print('Try Again!')
-			continue
-	while True:
-		input2 = input('Thirds or all!:   ').lower()
-		if input2 in ['thirds', 'all']:
-			break
-		else:
-			print('Try Again!')
-			continue
-
-	print(input1 + '  ' + input2)
-	if input1 == "major":
-		if input2 == "thirds":
-			quiz(keys, majorScaleThirds)
-		elif input2 == "all":
-			quiz(keys, majorScaleDegrees)
-	elif input1 == "minor":
-		print('', end='')
 		
