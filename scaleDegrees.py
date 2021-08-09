@@ -46,12 +46,15 @@ def quiz(key, degrees, timer):
 
 # Displays random key every 10 seconds. to be used as a tool to memorize
 # all the notes in the key.
-def randomNotes(timer):
+def randomNotes(timer, wait):
 	while True:
 		shuffle(keys)
 		for i in keys:
 			print(i)
-			sleep(timer)
+			if wait == True:
+				input()
+			else:
+				sleep(timer)
 
 
 if __name__ == "__main__":
@@ -79,7 +82,10 @@ seconds: '))
 	elif choice == 2:
 		quiz(keys, majorScaleDegrees, timerChoice)
 	elif choice == 5:
-		randomNotes(timerChoice)
+		wait = ''
+		while wait not in ['True', 'False']:
+			wait = input('Do you want the program to wait? True or False')
+		randomNotes(timerChoice, wait)
 	# minor scale thirds to be added
 	# minor scale degrees to be added
 
