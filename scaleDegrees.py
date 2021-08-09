@@ -51,7 +51,7 @@ def randomNotes(timer, wait):
 		shuffle(keys)
 		for i in keys:
 			print(i)
-			if wait == True:
+			if wait == 'True':
 				input()
 			else:
 				sleep(timer)
@@ -84,7 +84,7 @@ seconds: '))
 	elif choice == 5:
 		wait = ''
 		while wait not in ['True', 'False']:
-			wait = input('Do you want the program to wait? True or False')
+			wait = input('Do you want the program to wait? True or False: \n')
 		randomNotes(timerChoice, wait)
 	# minor scale thirds to be added
 	# minor scale degrees to be added
