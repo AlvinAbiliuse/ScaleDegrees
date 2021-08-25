@@ -50,7 +50,6 @@ def randomNotes(timer):
 	while True:
 		shuffle(keys)
 		for i in keys:
-			print(i)
 			os.system(f'cvlc ./audio/{i}.mp3 vlc://quit')
 			sleep(timer)
 
@@ -75,13 +74,15 @@ seconds: '))
 			print('You need to input a number')
 	# if elif statements to call the correct  function with the correct
 	# parameters
-	if choice == 1:
-		quiz(keys, majorScaleThirds, timerChoice)
-	elif choice == 2:
-		quiz(keys, majorScaleDegrees, timerChoice)
-	elif choice == 5:
-		randomNotes(timerChoice)
-	# minor scale thirds to be added
-	# minor scale degrees to be added
+	try:
+		if choice == 1:
+			quiz(keys, majorScaleThirds, timerChoice)
+		elif choice == 2:
+			quiz(keys, majorScaleDegrees, timerChoice)
+		elif choice == 5:
+			randomNotes(timerChoice)
+		# minor scale thirds to be added
+		# minor scale degrees to be added
 
-		
+	except KeyboardInterrupt:
+		print('Good Job!')
