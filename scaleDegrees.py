@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from gtts import gTTS
 from random import shuffle
 from time import sleep
 from sys import exit
@@ -47,17 +46,13 @@ def quiz(key, degrees, timer):
 
 # Displays random key every 10 seconds. to be used as a tool to memorize
 # all the notes in the key.
-def randomNotes(timer, wait):
+def randomNotes(timer):
 	while True:
 		shuffle(keys)
 		for i in keys:
 			print(i)
-			Obj = gTTS(text=i, lang='en', slow=False)
-			Obj.save(f'./audio/{i}.mp3')
-			if wait == 'True':
-				input()
-			else:
-				sleep(0)
+			os.system(f'cvlc ./audio/{i}.mp3 vlc://quit')
+			sleep(timer)
 
 
 if __name__ == "__main__":
@@ -85,10 +80,7 @@ seconds: '))
 	elif choice == 2:
 		quiz(keys, majorScaleDegrees, timerChoice)
 	elif choice == 5:
-		wait = ''
-		while wait not in ['True', 'False']:
-			wait = input('Do you want the program to wait? True or False: \n')
-		randomNotes(timerChoice, wait)
+		randomNotes(timerChoice)
 	# minor scale thirds to be added
 	# minor scale degrees to be added
 
