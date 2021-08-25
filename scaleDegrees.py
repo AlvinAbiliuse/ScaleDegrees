@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
-
+from gtts import gTTS
 from random import shuffle
 from time import sleep
 from sys import exit
+import os
 
 '''
 	from datetime import datetime
@@ -51,10 +52,12 @@ def randomNotes(timer, wait):
 		shuffle(keys)
 		for i in keys:
 			print(i)
+			Obj = gTTS(text=i, lang='en', slow=False)
+			Obj.save(f'./audio/{i}.mp3')
 			if wait == 'True':
 				input()
 			else:
-				sleep(timer)
+				sleep(0)
 
 
 if __name__ == "__main__":
