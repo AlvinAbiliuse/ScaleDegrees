@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from gtts import gTTS
 from random import shuffle
 from time import sleep
 from sys import exit
@@ -20,7 +21,6 @@ minorPentatonic = ['1', 'b3', '4', '5', 'b7']
 
 #TODO: ability to choose bpm   
 #TODO: GUI Interface
-#TODO: reveal notes in scale after sleep period in randomNotes()
 
 
 
@@ -50,7 +50,9 @@ def randomNotes(timer):
 	while True:
 		shuffle(keys)
 		for i in keys:
-			os.system(f'cvlc ./audio/{i}.mp3 vlc://quit')
+			print(i)
+			audioObj = gTTS(
+#			os.system(f'cvlc ./audio/{i}.mp3 vlc://quit')
 			sleep(timer)
 
 
