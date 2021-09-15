@@ -1,0 +1,24 @@
+
+majorScaleDegrees
+majorScaleThirds
+majorPentatonic
+minorScaleDegrees
+minorScaleThirds
+minorPentatonic
+
+ability to work with modes
+
+check if audio file exists; if not, call function from a module to
+create text to speech with (from gtts import gTTS)
+
+
+move everything from (if __name__ == "__main__":) to inside a quizData
+
+
+modules
+
+init
+quizData
+textToSpeech
+quiz
+randomNotes
