@@ -51,7 +51,7 @@ def randomNotes(timer):
 		shuffle(keys)
 		for i in keys:
 			print(i)
-			audioObj = gTTS(
+#			audioObj = gTTS(
 #			os.system(f'cvlc ./audio/{i}.mp3 vlc://quit')
 			sleep(timer)
 
